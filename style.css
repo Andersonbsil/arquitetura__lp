@@ -1,0 +1,385 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+/* Estilos globais (cores e fontes) */
+:root {
+    --cor-primaria: #3e3d3d;
+    --cor-segundaria: #f6f6f6;
+    --cor-terciaria: #2E3A4A;
+    --cor-houver: #3e3d3d;
+
+    --font-primaria: 'krona one', sans-serif;
+    --font-segundaria: 'Monteserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Adiciona box-sizing globalmente */
+}
+
+body {
+    background-color: var(--cor-primaria);
+    color: var(--cor-segundaria);
+    min-height: 100vh; /* Garante que o body ocupe a altura total */
+    display: flex;
+    flex-direction: column; /* Organiza os elementos da página em coluna */
+}
+
+/* Cabeçalho */
+.cabecalho {
+    padding: 2% 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--cor-terciaria);
+    color: var(--cor-segundaria);
+}
+
+.cabecalho .logo {
+    font-size: 2rem;
+    font-family: var(--font-primaria);
+    color: var(--cor-segundaria);
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link {
+    font-family: var(--font-segundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-segundaria);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.cabecalho__menu__link:hover {
+    color: #ccc;
+}
+
+/* Conteúdo Principal (Apresentação) */
+main.apresentacao {
+    flex-grow: 1; /* Faz o conteúdo principal ocupar o espaço restante */
+    padding: 6% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo {
+    font-family: var(--font-primaria);
+    font-size: 2.25rem;
+}
+
+.apresentacao__conteudo__titulo .titulo-destaque {
+    color: var(--cor-segundaria);
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 1.5rem;
+    font-family: var(--font-segundaria);
+}
+
+.apresentacao__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha os links à esquerda */
+    gap: 20px;
+}
+
+.apresentacao__links__subtitulos {
+    font-family: var(--font-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.apresentacao__links__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid var(--cor-terciaria);
+    width: auto;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--cor-segundaria);
+    font-family: var(--font-segundaria);
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.apresentacao__links__link img {
+    width: 24px;
+    height: 24px;
+}
+
+.apresentacao__links__link:hover {
+    background-color: var(--cor-houver);
+}
+
+.apresentacao__imagem {
+    width: 30%;
+    max-width: 400px; /* Limita o tamanho máximo da imagem */
+    border-radius: 10px;
+}
+
+/* Seção de Projetos */
+.projetos {
+    padding: 6% 15%;
+    text-align: center;
+}
+
+.projetos__titulo {
+    font-family: var(--font-primaria);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Permite que os cards quebrem a linha em telas menores */
+}
+
+.card {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-segundaria);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-family: var(--font-primaria);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-family: var(--font-segundaria);
+    font-size: 1rem;
+}
+
+/* Botão Flutuante WhatsApp */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    font-size: 24px;
+    padding: 12px 16px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para a página de contato */
+.conteudo {
+    padding: 6% 15%; /* Adiciona um respiro ao redor do conteúdo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.conteudo__titulo-contato {
+    font-family: var(--font-primaria);
+    font-size: 2.5rem;
+    color: var(--cor-segundaria);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.formulario-contato {
+    width: 100%;
+    max-width: 600px; /* Limita a largura do formulário para melhor leitura */
+    background-color: var(--cor-terciaria);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block; /* Garante que a label fique em uma nova linha */
+    font-family: var(--font-segundaria);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--cor-segundaria);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid var(--cor-secundaria);
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    font-size: 1rem;
+    font-family: var(--font-segundaria);
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+.formulario-contato__botao {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-family: var(--font-segundaria);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    background-color: var(--cor-secundaria);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.formulario-contato__botao:hover {
+    background-color: #ddd;
+    transform: translateY(-2px); /* Efeito sutil ao passar o mouse */
+}
+
+
+/* Estilos para a página de Projetos */
+.projetos__galeria {
+    padding: 6% 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.projetos__titulo {
+    font-family: var(--font-primaria);
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--cor-segundaria); /* Adicione essa linha para o título ficar branco */
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--cor-terciaria);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: calc(33.33% - 20px);
+    max-width: 400px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card__conteudo {
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--cor-segundaria); /* Garante que o texto dentro do card seja branco */
+}
+
+.card__conteudo h3 {
+    font-family: var(--font-primaria);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card__conteudo p {
+    font-family: var(--font-segundaria);
+    font-size: 1rem;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+}
+
+
+/* Rodapé */
+.rodape {
+    background-color: var(--cor-terciaria);
+    padding: 2%;
+    text-align: center;
+    color: var(--cor-segundaria);
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: auto; /* Garante que o rodapé fique no final da página */
+}
+
+@media (max-width: 1100px) {
+    .cabecalho {
+        padding: 5%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+
+    .apresentacao__imagem {
+        width: 80%;
+    }
+}
